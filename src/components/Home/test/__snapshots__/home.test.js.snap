@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the 404 Component should match snapshot 1`] = `
+<h1>
+  Welcome to the store manager
+</h1>
+`;
