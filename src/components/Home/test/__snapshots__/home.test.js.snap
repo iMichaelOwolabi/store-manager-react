@@ -3,5 +3,51 @@
 exports[`Test the 404 Component should match snapshot 1`] = `
 <div
   className="wrapper"
-/>
+>
+  <section
+    id="login"
+  >
+    <div
+      className="push"
+    />
+    <div
+      className="loginBox"
+    >
+      <h3>
+        Account Login
+      </h3>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          id="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="Username"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          id="password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          required={true}
+          type="password"
+          value=""
+        />
+        <div
+          className="error"
+        />
+        <button
+          className="button-1"
+          type="submit"
+        >
+          Sign in
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
 `;

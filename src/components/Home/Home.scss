@@ -1,0 +1,46 @@
+@import '../../partial-styles/styles.scss';
+
+#login {
+  margin: 50px auto auto auto;
+  overflow: hidden;
+  align-content: center;
+  text-align: center;
+}
+
+#login h3 {
+  color: $maincolor;
+}
+.loginBox {
+  background: $white;
+  width: 50%;
+  border-radius: 4px;
+  margin: 0 auto 50px auto;
+  padding: 0px 0px 20px 0px;
+  border: 1px solid;
+}
+input {
+  display: block;
+  line-height: 1.5;
+  margin: 20px auto 7px auto;
+      margin-bottom: 7px;
+  padding: 10px;
+  min-width: 30%;
+}
+.button-1 {
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #35072C;
+  font-size: 16px;
+  width: 40%;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+.push {
+  height: 50px;
+}
+#login input {
+  width: 60%;
+  margin-bottom: 15px;
+}
