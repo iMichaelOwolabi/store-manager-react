@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test the 404 Component should match snapshot 1`] = `
-<div
-  className="wrapper"
-/>
+<Fragment>
+  <footer>
+    <p>
+      Store Manager, Copyrighty © 2019
+    </p>
+  </footer>
+</Fragment>
 `;

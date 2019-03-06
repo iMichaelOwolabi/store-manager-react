@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Narbar Component /> should 1`] = `
+<Fragment>
+  <header>
+    <div
+      className="container"
+    >
+      <div
+        id="logo"
+      >
+        <h1>
+          Store Manager
+        </h1>
+      </div>
+    </div>
+  </header>
+</Fragment>
+`;
