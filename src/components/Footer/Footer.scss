@@ -1,0 +1,11 @@
+@import '../../partial-styles/styles.scss';
+
+footer {
+  padding: 10px;
+  background-color: $maincolor;
+  color: #ffffff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,5 +1,8 @@
 import React from 'react';
+import '../../partial-styles/styles.scss';
 
 export default function Home() {
-  return <h1>Welcome to the store manager</h1>;
+  return (
+    <div className="wrapper" />
+  );
 }
