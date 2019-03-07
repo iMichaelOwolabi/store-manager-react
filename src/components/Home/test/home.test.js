@@ -1,9 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Home from '..';
+import { shallow, mount } from 'enzyme';
+import { Login } from '..';
 
 describe('Test the 404 Component', () => {
-  const wrapper = shallow(<Home />);
+  let wrapper = shallow(<Login />);
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -18,6 +18,10 @@ describe('Test the 404 Component', () => {
   });
 
   it('should simulate on submit event ', () => {
+    const props = {
+      login: () => {}
+    };
+    wrapper = mount(<Login {...props} />);
     wrapper.find('form').simulate('submit', {
       preventDefault: jest.fn()
     });
