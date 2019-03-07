@@ -12,9 +12,8 @@ export const loginSuccess = payload => ({
   payload
 });
 
-export const loginFailure = payload => ({
+export const loginFailure = () => ({
   type: LOGIN_FAILURE,
-  payload
 });
 
 export const userLogin = user => async (dispatch) => {
@@ -22,11 +21,11 @@ export const userLogin = user => async (dispatch) => {
   try {
     const response = await axiosLogin(user);
     setToken(response.data.data.token);
-    dispatch(loginSuccess(response));
+    dispatch(loginSuccess(response.data.data.rows[0]));
     toast.success(response.data.message);
   } catch (error) {
     if (error) {
-      dispatch(loginFailure(error.response));
+      dispatch(loginFailure());
       toast.error(error.response.data.message);
     } else {
       toast.warn(networkErrorMessage);
