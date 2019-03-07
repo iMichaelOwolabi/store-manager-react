@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 import '../../partial-styles/styles.scss';
 import './Home.scss';
 import loginValidator from '../../helpers/validator';
+import { userLogin } from '../../actions/authActions';
 
 class Home extends Component {
   constructor(props) {
@@ -24,6 +28,8 @@ class Home extends Component {
     if (errors) {
       return this.setState({ errors });
     }
+    const { login } = this.props;
+    login(user);
   }
 
   handleChange(event) {
@@ -37,6 +43,7 @@ class Home extends Component {
 
   render() {
     const { user, errors } = this.state;
+    if (this.props.auth.isAuthenticated) { return <Redirect to="/dashboard" />; }
     return (
       <div className="wrapper">
         <section id="login">
@@ -55,4 +62,25 @@ class Home extends Component {
     );
   }
 }
-export default Home;
+
+Home.propTypes = {
+  login: PropTypes.func,
+  auth: PropTypes.object,
+};
+Home.defaultProps = {
+  login: null,
+  auth: {}
+};
+
+const mapDispatchToProps = dispatch => ({
+  login: user => dispatch(userLogin(user))
+});
+const mapStateToProps = state => ({
+  auth: state.authReducer
+});
+
+export { Home as Login };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
