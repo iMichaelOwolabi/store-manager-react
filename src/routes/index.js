@@ -8,6 +8,12 @@ export default [
     exact: true,
     path: '/',
   },
+  {
+    name: 'dashboard',
+    component: Home,
+    exact: true,
+    path: '/dashboard',
+  },
 
   {
     name: '404',

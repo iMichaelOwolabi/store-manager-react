@@ -20,7 +20,7 @@ const mockStore = configureStore([thunk]);
 const store = mockStore({ auth: {} });
 const dispatch = jest.fn();
 
-describe('user authentication actions Signup', () => {
+describe('user authentication actions login', () => {
   beforeEach(() => {
     moxios.install();
   });
@@ -39,8 +39,7 @@ describe('user authentication actions Signup', () => {
 
   it(`should return an action object once ${actionTypes.LOGIN_FAILURE} is fired`, () => {
     expect(loginFailure(payload)).toEqual({
-      type: actionTypes.LOGIN_FAILURE,
-      payload
+      type: actionTypes.LOGIN_FAILURE
     });
   });
 
