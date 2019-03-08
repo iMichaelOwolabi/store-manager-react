@@ -1,0 +1,13 @@
+@import '../../partial-styles/colors.scss';
+.ui.basic.button.newProduct, .ui.basic.buttons .button {
+  background: transparent none !important;
+  color: $maincolor;
+  font-weight: 400;
+  border-radius: .28571429rem;
+  text-transform: none;
+  text-shadow: none !important;
+  box-shadow: 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  border-style: double;
+  border-color: $maincolor;
+  margin-top: 1rem;
+}

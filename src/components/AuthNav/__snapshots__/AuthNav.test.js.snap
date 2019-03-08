@@ -74,12 +74,17 @@ exports[`<Narbar Component /> should 1`] = `
           >
             Logout
           </Link>
-          <Icon
-            as="i"
-            className="cart"
-            name="shop"
-            size="large"
-          />
+          <Link
+            replace={false}
+            to="/"
+          >
+            <Icon
+              as="i"
+              className="cart"
+              name="shop"
+              size="large"
+            />
+          </Link>
         </ul>
       </nav>
     </div>
