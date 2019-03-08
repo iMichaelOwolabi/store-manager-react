@@ -1,43 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Narbar Component /> should 1`] = `
-<Fragment>
-  <header>
-    <ToastContainer
-      autoClose={5000}
-      bodyClassName={null}
-      className={null}
-      closeButton={
-        <CloseButton
-          ariaLabel="close"
-        />
-      }
-      closeOnClick={true}
-      draggable={true}
-      draggablePercent={80}
-      hideProgressBar={false}
-      newestOnTop={false}
-      pauseOnFocusLoss={true}
-      pauseOnHover={true}
-      position="top-right"
-      progressClassName={null}
-      progressStyle={null}
-      rtl={false}
-      style={null}
-      toastClassName={null}
-      transition={[Function]}
-    />
+<header>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+  <div
+    className="container"
+  >
     <div
-      className="container"
+      id="logo"
     >
-      <div
-        id="logo"
-      >
-        <h1>
-          Store Manager
-        </h1>
-      </div>
+      <h1>
+        Store Manager
+      </h1>
     </div>
-  </header>
-</Fragment>
+  </div>
+</header>
 `;
