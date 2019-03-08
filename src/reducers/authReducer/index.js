@@ -25,6 +25,7 @@ export default (state = initialState.auth, action) => {
         authIsLoading: false,
         success: true,
         isAuthenticated: true,
+        response: action.payload
       };
     default:
       return state;

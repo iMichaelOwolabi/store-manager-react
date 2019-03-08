@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the 404 Component should match snapshot 1`] = `
+<Fragment>
+  <AuthNav />
+  <div
+    className="container"
+  >
+    New Product
+  </div>
+</Fragment>
+`;

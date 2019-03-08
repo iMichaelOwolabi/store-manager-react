@@ -21,7 +21,9 @@ export default function AuthNav() {
               <Link to="/sales" className="navbar">Sales</Link>
               <Link to="/attendants" className="navbar">Attendants</Link>
               <Link to="/" className="navbar">Logout</Link>
-              <Icon name="shop" className="cart" size="large" />
+              <Link to="/">
+                <Icon name="shop" className="cart" size="large" />
+              </Link>
             </ul>
           </nav>
         </div>
