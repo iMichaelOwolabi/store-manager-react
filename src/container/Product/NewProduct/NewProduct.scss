@@ -1,0 +1,35 @@
+@import '../../../partial-styles/fonts.scss';
+
+.create-product {
+  text-align: center;
+  margin: {
+    top: 2.5rem;
+    right: auto;
+    left: auto;
+  }
+  width: 50%;
+  min-width: 300px;
+}
+.create-product input {
+  width: 90%;
+  padding: .7rem;
+  outline: none;
+  font-weight: 100;
+}
+.create-product p {
+  font-weight: 200;
+  padding-top: 1rem;
+}
+.upload {
+  background-color: #888;
+  border-radius: 5px;
+}
+.create-product button {
+  padding: 10px;
+  border-radius: .3rem;
+  font-size: 1.1rem;
+  min-width: 10%;
+  font-weight: 500;
+  margin-top: 15px;
+  outline: none;
+}
