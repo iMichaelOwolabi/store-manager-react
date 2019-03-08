@@ -6,7 +6,76 @@ exports[`Test the 404 Component should match snapshot 1`] = `
   <div
     className="container"
   >
-    New Product
+    <section
+      className="create-product"
+    >
+      <h2>
+        Add Product
+      </h2>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="productName"
+          onChange={[Function]}
+          placeholder="Product Name"
+          required={true}
+          type="text"
+        />
+        <div
+          className="error"
+        />
+        <input
+          name="price"
+          onChange={[Function]}
+          placeholder="Price"
+          required={true}
+          type="number"
+        />
+        <div
+          className="error"
+        />
+        <input
+          name="quantity"
+          onChange={[Function]}
+          placeholder="Quantity"
+          required={true}
+          type="number"
+        />
+        <div
+          className="error"
+        />
+        <input
+          name="minQuantity"
+          onChange={[Function]}
+          placeholder="Minimum Inventory Quantity"
+          required={true}
+          type="number"
+        />
+        <div
+          className="error"
+        />
+        <p>
+          Upload Product Image
+        </p>
+        <input
+          className="upload"
+          name="productImage"
+          onChange={[Function]}
+          type="file"
+        />
+        <div
+          className="error"
+        />
+        <button
+          className=""
+          name="submit"
+          type="submit"
+        >
+          Create Product
+        </button>
+      </form>
+    </section>
   </div>
 </Fragment>
 `;
