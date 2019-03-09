@@ -23,10 +23,10 @@ export const productValidator = (product) => {
   } else if (!Validator.isNumeric(product.quantity)) {
     errors.quantity = 'Quantity must be a number';
   }
-  if (Validator.isEmpty(product.minQuantity)) {
-    errors.minQuantity = 'The Minimum quantity is required';
-  } else if (!Validator.isNumeric(product.minQuantity)) {
-    errors.minQuantity = 'Minimum quantity must be a number';
+  if (Validator.isEmpty(product.minQty)) {
+    errors.minQty = 'The Minimum quantity is required';
+  } else if (!Validator.isNumeric(product.minQty)) {
+    errors.minQty = 'Minimum quantity must be a number';
   }
   if (Validator.isEmpty(product.productImage)) {
     errors.productImage = 'The product image is required';

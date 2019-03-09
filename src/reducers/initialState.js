@@ -3,7 +3,13 @@ const initialState = {
     authIsLoading: false,
     success: false,
     isAuthenticated: false,
-    response: ''
+    response: {}
+  },
+  product: {
+    create: {
+      createProductLoading: false,
+      success: false,
+    }
   }
 };
 export default initialState;

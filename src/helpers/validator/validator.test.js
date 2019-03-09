@@ -1,11 +1,12 @@
 import loginValidator, { productValidator } from '.';
 
-
 describe('test login validation function', () => {
   test('return value of the login validation function', () => {
     const username = '';
     const password = '';
-    expect(loginValidator(username, password)).toBe('Kindly enter username and password to proceed');
+    expect(loginValidator(username, password)).toBe(
+      'Kindly enter username and password to proceed'
+    );
   });
   test('return value of the login validation function', () => {
     const username = 'username';
@@ -29,7 +30,7 @@ describe('Test validator', () => {
       productName: '',
       price: '2',
       quantity: '1',
-      minQuantity: '1',
+      minQty: '1',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
@@ -40,7 +41,7 @@ describe('Test validator', () => {
       productName: 'pro',
       price: '',
       quantity: '1',
-      minQuantity: '1',
+      minQty: '1',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
@@ -51,7 +52,7 @@ describe('Test validator', () => {
       productName: 'pro',
       price: 'come',
       quantity: '1',
-      minQuantity: '1',
+      minQty: '1',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
@@ -62,7 +63,7 @@ describe('Test validator', () => {
       productName: 'pro',
       price: '2',
       quantity: '',
-      minQuantity: '1',
+      minQty: '1',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
@@ -73,7 +74,7 @@ describe('Test validator', () => {
       productName: 'pro',
       price: '1',
       quantity: 'qty',
-      minQuantity: '1',
+      minQty: '1',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
@@ -84,21 +85,21 @@ describe('Test validator', () => {
       productName: 'pro',
       price: '2',
       quantity: '1',
-      minQuantity: '',
+      minQty: '',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
-    expect(checkProduct.minQuantity).toEqual('The Minimum quantity is required');
+    expect(checkProduct.minQty).toEqual('The Minimum quantity is required');
   });
   it('should check if minimum quantity field is a number', () => {
     const product = {
       productName: 'pro',
       price: '1',
       quantity: '1',
-      minQuantity: 'miqty',
+      minQty: 'miqty',
       productImage: 'img'
     };
     const checkProduct = productValidator(product);
-    expect(checkProduct.minQuantity).toEqual('Minimum quantity must be a number');
+    expect(checkProduct.minQty).toEqual('Minimum quantity must be a number');
   });
 });

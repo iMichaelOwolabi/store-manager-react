@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import NewProduct from '.';
+import { CreateProduct } from '.';
 
 describe('Test the 404 Component', () => {
-  const wrapper = shallow(<NewProduct />);
+  let wrapper = shallow(<CreateProduct />);
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -32,6 +32,10 @@ describe('Test the 404 Component', () => {
     expect(wrapper.find('input[type="file"]').prop('name')).toContain('productImage');
   });
   it('should simulate on submit event ', () => {
+    const props = {
+      addProduct: () => {}
+    };
+    wrapper = shallow(<CreateProduct {...props} />);
     wrapper.find('form').simulate('submit', {
       preventDefault: jest.fn()
     });
