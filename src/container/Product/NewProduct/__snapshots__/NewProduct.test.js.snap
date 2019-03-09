@@ -46,7 +46,7 @@ exports[`Test the 404 Component should match snapshot 1`] = `
           className="error"
         />
         <input
-          name="minQuantity"
+          name="minQty"
           onChange={[Function]}
           placeholder="Minimum Inventory Quantity"
           required={true}
@@ -68,8 +68,7 @@ exports[`Test the 404 Component should match snapshot 1`] = `
           className="error"
         />
         <button
-          className=""
-          name="submit"
+          disabled={true}
           type="submit"
         >
           Create Product
