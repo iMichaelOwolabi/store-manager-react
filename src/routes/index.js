@@ -1,11 +1,13 @@
 import Home from '../components/Home';
 import Dashboard from '../components/Dashboard';
-import Product from '../container/Product';
+import Products from '../container/Product';
 import Sales from '../components/Sales';
 import Attendants from '../components/Attendant';
 import Cart from '../components/Cart';
 import NewProduct from '../container/Product/NewProduct';
+import ViewProduct from '../container/Product/ViewProduct';
 import NotFound from '../components/NotFound';
+
 
 export default [
   {
@@ -21,10 +23,16 @@ export default [
     path: '/dashboard',
   },
   {
-    name: 'product',
-    component: Product,
+    name: 'products',
+    component: Products,
     exact: true,
     path: '/products',
+  },
+  {
+    name: 'product',
+    component: ViewProduct,
+    exact: true,
+    path: '/products/:id',
   },
   {
     name: 'new product',

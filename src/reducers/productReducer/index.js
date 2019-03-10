@@ -4,26 +4,50 @@ import initialState from '../initialState';
 const {
   CREATE_PRODUCT_LOADING,
   CREATE_PRODUCT_FAILURE,
-  CREATE_PRODUCT_SUCCESS
+  CREATE_PRODUCT_SUCCESS,
+  GET_ALL_PRODUCTS_FAILURE,
+  GET_ALL_PRODUCTS_SUCCESS,
 } = actionTypes;
 
-export default (state = initialState.product.create, action) => {
+const { product } = initialState;
+
+export default (state = product, action) => {
   switch (action.type) {
     case CREATE_PRODUCT_LOADING:
       return {
         ...state,
-        createProductLoading: true
+        create: {
+          createProductLoading: true
+        }
       };
     case CREATE_PRODUCT_FAILURE:
       return {
         ...state,
-        createProductLoading: false,
+        create: {
+          createProductLoading: false,
+          success: false
+        }
       };
     case CREATE_PRODUCT_SUCCESS:
       return {
         ...state,
-        createProductLoading: false,
-        success: true,
+        create: {
+          createProductLoading: false,
+          success: true,
+        }
+      };
+    case GET_ALL_PRODUCTS_SUCCESS:
+      return {
+        ...state,
+        get: {
+          products: action.payload.data,
+        }
+      };
+    case GET_ALL_PRODUCTS_FAILURE:
+      return {
+        get: {
+          state
+        }
       };
     default:
       return state;

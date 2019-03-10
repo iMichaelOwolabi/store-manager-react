@@ -9,6 +9,10 @@ const initialState = {
     create: {
       createProductLoading: false,
       success: false,
+    },
+    get: {
+      success: true,
+      products: []
     }
   }
 };
