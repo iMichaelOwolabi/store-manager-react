@@ -21,8 +21,9 @@ export default function AuthNav() {
               <Link to="/sales" className="navbar">Sales</Link>
               <Link to="/attendants" className="navbar">Attendants</Link>
               <Link to="/" className="navbar">Logout</Link>
-              <Link to="/">
+              <Link to="/cart">
                 <Icon name="shop" className="cart" size="large" />
+                {sessionStorage.getItem('cart') ? <span className="activeCart">*</span> : null}
               </Link>
             </ul>
           </nav>

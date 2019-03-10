@@ -5,12 +5,12 @@ footer {
   background-color: $maincolor;
   color: #ffffff;
   text-align: center;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   margin-top: 2rem;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 900px) {
   footer {
     position: inherit;
     margin-top: 2rem;

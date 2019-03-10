@@ -58,6 +58,7 @@ exports[`Test the single Products Component should match snapshot 1`] = `
         </p>
         <button
           className="productBtn"
+          onClick={[Function]}
           type="submit"
         >
           Add to Cart

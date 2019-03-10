@@ -16,6 +16,7 @@ class Product extends React.Component {
 
   render() {
     const { product } = this.props;
+    if (!product) { window.location.reload(); }
     return (
       <Fragment>
         <AuthNav />

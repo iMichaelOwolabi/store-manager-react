@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
 import AuthNav from '../../../components/AuthNav';
 import './ViewProduct.scss';
 import { getSingleProduct } from '../../../actions/productActions';
+import addToCart from '../../../helpers/addToCart';
+import { addToCartMessage } from '../../../constants';
+
 
 class ViewProduct extends React.Component {
   constructor(props) {
@@ -11,7 +15,7 @@ class ViewProduct extends React.Component {
     this.state = {
       products: {
         quantity: 1,
-      }
+      },
     };
   }
 
@@ -28,6 +32,15 @@ class ViewProduct extends React.Component {
     this.setState({
       products
     });
+    sessionStorage.setItem('qty', products.quantity);
+  }
+
+  handleAddToCart = () => {
+    const { product } = this.props;
+    const choiceProduct = product.theProduct.product;
+    addToCart(choiceProduct);
+    toast.success(addToCartMessage);
+    window.location.reload();
   }
 
   render() {
@@ -60,7 +73,7 @@ class ViewProduct extends React.Component {
               Minimum Qty:
                 <span className="moveRight">{product.theProduct.product.mininventoryqty}</span>
               </p>
-              <button className="productBtn" type="submit">Add to Cart</button>
+              <button className="productBtn" type="submit" onClick={this.handleAddToCart}>Add to Cart</button>
               <button className="productBtn" type="submit">Modify</button>
               <button className="deleteButton" type="submit">Delete</button>
             </div>
