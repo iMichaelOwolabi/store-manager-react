@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the single Products Component should match snapshot 1`] = `
+<Fragment>
+  <AuthNav />
+  <div
+    className="wrapper"
+  >
+    <section
+      className="productDetails"
+    >
+      <img
+        alt=""
+        className="productImage"
+        src=""
+      />
+      <div
+        className="details"
+      >
+        <h1 />
+        <p
+          className="productInfo"
+        >
+          Qty:
+          <input
+            className="quantity"
+            name="quantity"
+            onChange={[Function]}
+            type="number"
+            value={1}
+          />
+        </p>
+        <p
+          className="productInfo"
+        >
+          Price:
+          <span
+            className="moveRight"
+          >
+            ₦
+          </span>
+        </p>
+        <p
+          className="productInfo"
+        >
+          Available Quantity:
+          <span
+            className="moveRight"
+          />
+        </p>
+        <p
+          className="productInfo"
+        >
+          Minimum Qty:
+          <span
+            className="moveRight"
+          />
+        </p>
+        <button
+          className="productBtn"
+          type="submit"
+        >
+          Add to Cart
+        </button>
+        <button
+          className="productBtn"
+          type="submit"
+        >
+          Modify
+        </button>
+        <button
+          className="deleteButton"
+          type="submit"
+        >
+          Delete
+        </button>
+      </div>
+    </section>
+  </div>
+</Fragment>
+`;

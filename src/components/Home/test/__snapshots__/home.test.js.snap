@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test the 404 Component should match snapshot 1`] = `
+exports[`Test the Login Component should match snapshot 1`] = `
 <Fragment>
   <Navbar />
   <div

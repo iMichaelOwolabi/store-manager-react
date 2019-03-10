@@ -1,5 +1,8 @@
 import { toast } from 'react-toastify';
-import createProductRequest, { getAllProductsRequest } from '../../helpers/axios/product';
+import createProductRequest, {
+  getAllProductsRequest,
+  getSingleProductRequest,
+} from '../../helpers/axios/product';
 import actionTypes from './actionTypes';
 import triggerLoading from '../../helpers/triggerLoading';
 import { networkErrorMessage } from '../../constants';
@@ -10,6 +13,8 @@ const {
   CREATE_PRODUCT_SUCCESS,
   GET_ALL_PRODUCTS_FAILURE,
   GET_ALL_PRODUCTS_SUCCESS,
+  GET_SINGLE_PRODUCT_FAILURE,
+  GET_SINGLE_PRODUCT_SUCCESS
 } = actionTypes;
 
 export const createProductSuccess = () => ({
@@ -50,5 +55,23 @@ export const getAllProducts = () => async (dispatch) => {
     dispatch(getProductsSuccess(response.data));
   } catch (error) {
     dispatch(getProductsFailure());
+  }
+};
+
+export const getProductFailure = () => ({
+  type: GET_SINGLE_PRODUCT_FAILURE
+});
+
+export const getProductSuccess = payload => ({
+  type: GET_SINGLE_PRODUCT_SUCCESS,
+  payload
+});
+
+export const getSingleProduct = id => async (dispatch) => {
+  try {
+    const response = await getSingleProductRequest(id);
+    dispatch(getProductSuccess(response.data));
+  } catch (error) {
+    dispatch(getProductFailure());
   }
 };
