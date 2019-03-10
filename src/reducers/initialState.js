@@ -5,7 +5,7 @@ const initialState = {
     isAuthenticated: false,
     response: {}
   },
-  product: {
+  products: {
     create: {
       createProductLoading: false,
       success: false,
@@ -13,6 +13,9 @@ const initialState = {
     get: {
       success: true,
       products: []
+    },
+    theProduct: {
+      product: []
     }
   }
 };

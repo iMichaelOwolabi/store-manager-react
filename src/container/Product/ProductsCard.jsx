@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Button, Card } from 'semantic-ui-react';
 
-const extra = <Button type="submit" className="details">Details</Button>;
+const extra = <Button type="submit" className="viewDetails">Details</Button>;
 
 const ProductsCard = ({ products }) => {
   if (products) {

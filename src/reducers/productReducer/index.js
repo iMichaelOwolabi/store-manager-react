@@ -7,11 +7,13 @@ const {
   CREATE_PRODUCT_SUCCESS,
   GET_ALL_PRODUCTS_FAILURE,
   GET_ALL_PRODUCTS_SUCCESS,
+  GET_SINGLE_PRODUCT_FAILURE,
+  GET_SINGLE_PRODUCT_SUCCESS,
 } = actionTypes;
 
-const { product } = initialState;
+const { products } = initialState;
 
-export default (state = product, action) => {
+export default (state = products, action) => {
   switch (action.type) {
     case CREATE_PRODUCT_LOADING:
       return {
@@ -46,7 +48,19 @@ export default (state = product, action) => {
     case GET_ALL_PRODUCTS_FAILURE:
       return {
         get: {
+          ...state
+        }
+      };
+    case GET_SINGLE_PRODUCT_FAILURE:
+      return {
+        theProduct: {
           state
+        }
+      };
+    case GET_SINGLE_PRODUCT_SUCCESS:
+      return {
+        theProduct: {
+          product: action.payload.data
         }
       };
     default:

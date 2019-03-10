@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Login } from '..';
 
-describe('Test the 404 Component', () => {
+describe('Test the Login Component', () => {
   let wrapper = shallow(<Login />);
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
