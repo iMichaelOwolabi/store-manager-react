@@ -11,3 +11,9 @@ const createProductRequest = async (product) => {
   return response;
 };
 export default createProductRequest;
+
+const getAllProductsRequest = async () => {
+  const response = await axios('/products', options);
+  return response;
+};
+export { getAllProductsRequest };

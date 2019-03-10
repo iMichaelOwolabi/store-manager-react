@@ -4,6 +4,8 @@
 .wrapper {
   width: 80%;
   margin: auto;
+  overflow: auto;
+  min-width: 301px;
 }
 
 body {
