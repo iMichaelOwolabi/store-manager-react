@@ -65,11 +65,21 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-.cart {
+i.icon.cart {
 	color: #B8860B;
+	margin-top: 7px;
+  position: fixed
 }
 header nav {
 	float: right;
 	margin-top: 10px;
 	font-weight: bold;
+}
+span.activeCart {
+	font-size: 2rem;
+	color: rgba($color: #f00606, $alpha: 1.0);
+	display: inline;
+	position: sticky;
+	margin-left: 7px;
+	z-index: 3;
 }

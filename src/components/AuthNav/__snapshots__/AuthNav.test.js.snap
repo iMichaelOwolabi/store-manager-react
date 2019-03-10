@@ -76,7 +76,7 @@ exports[`<Narbar Component /> should 1`] = `
           </Link>
           <Link
             replace={false}
-            to="/"
+            to="/cart"
           >
             <Icon
               as="i"

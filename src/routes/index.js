@@ -3,7 +3,7 @@ import Dashboard from '../components/Dashboard';
 import Products from '../container/Product';
 import Sales from '../components/Sales';
 import Attendants from '../components/Attendant';
-import Cart from '../components/Cart';
+import Cart from '../container/Product/Cart';
 import NewProduct from '../container/Product/NewProduct';
 import ViewProduct from '../container/Product/ViewProduct';
 import NotFound from '../components/NotFound';
